@@ -3,6 +3,12 @@ import java.time.Instant;
 
 public class BinarySearch
 {
+    /**
+     * Results:
+     *  - Both Recursive and Iterative approach took 0 milli seconds.
+     *  - In this case, Iterative would be better since less
+     * @param args
+     */
     public static void main(String[] args)
     {
         int[] test_case  = LinearSearch.get_test_case();
@@ -42,15 +48,15 @@ public class BinarySearch
         int left = 0;
         int right = array.length-1;
 
-        while (left < right)
+        while (left <= right)
         {
             int mid = (left + right) / 2;
             if (array[mid] == key)
                 return true;
-            else if (array[mid] < key)
-                right = mid - 1;
-            else if (array[mid] > key)
+            else if (key > array[mid])
                 left = mid + 1;
+            else if (key < array[mid])
+                right = mid - 1;
         }
         return false;
     }
