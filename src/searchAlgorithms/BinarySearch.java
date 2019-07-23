@@ -1,16 +1,14 @@
 import java.time.Duration;
 import java.time.Instant;
 
-public class BinarySearch
-{
+public class BinarySearch {
     /**
      * Results:
      *  - Both Recursive and Iterative approach took 0 milli seconds.
      *  - In this case, Iterative would be better since less
      * @param args
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int[] test_case  = LinearSearch.get_test_case();
         int key = test_case.length - 1;
 
@@ -27,8 +25,7 @@ public class BinarySearch
         System.out.println("Iterative approach took: " + Duration.between(start, end).toMillis());
     }
 
-    private static boolean recursive_approach(int[] array, int left, int right, int key)
-    {
+    private static boolean recursive_approach(int[] array, int left, int right, int key) {
         if (left > right)
             return false;
 
@@ -43,13 +40,11 @@ public class BinarySearch
         return false;
     }
 
-    private static boolean iterative_approach(int[] array, int key)
-    {
+    private static boolean iterative_approach(int[] array, int key) {
         int left = 0;
         int right = array.length-1;
 
-        while (left <= right)
-        {
+        while (left <= right) {
             int mid = (left + right) / 2;
             if (array[mid] == key)
                 return true;
