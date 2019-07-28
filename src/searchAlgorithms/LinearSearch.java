@@ -4,12 +4,11 @@ import java.time.Instant;
 public class LinearSearch {
     /**
      * Results for testcase creation:
-     *  - On using Integer data type, data insertion took 44799 seconds.
+     *  - On using Integer data type, data insertion took 44799 milli seconds.
      *  - On using int (primitive) data type, data insertion took 241 milli seconds.
      *
      * Result for Search:
      *  - Linear approach took 45 milli seconds.
-     *  - Recursive approach wont work with big inputs. Stack overflow error will occur.
      *
      * @param args:
      */
