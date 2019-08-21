@@ -1,31 +1,53 @@
 package array;
-
+import java.io.*;
 public class ReArrange1 {
-    public static void main(String[] args) {
-        int[] arr = { 12, 11, -13, -5, 6, -7, 5, -3, -6 };
-        System.out.println("Count");rearrange(arr);
+    public static void main(String[] args)
+    {
+        RandomPlan r = new RandomPlan();
+        r.getRate();
     }
 
-    static int rearrange(int[] array) {
-        int count = 0;
-        int low = 0;
-        int high = array.length - 1;
-        while(low < high) {
-            if (array[low] > 0 && array[high] < 0) {
-                int temp = array[low];
-                array[low] = array[high];
-                array[high] = temp;
-                count++;
-            }
-            if (array[low] < 0)
-                low++;
-            if (array[high] > 0)
-                high --;
-        }
+}
+abstract class Plan{
+    abstract void getRate();
+    protected double rate;
 
-        for (int a : array) {
-          System.out.println(a);
-        }
-        return count;
+    public void calculateBill(int units){
+        System.out.println(units*rate);
     }
+}
+
+class  DomesticPlan extends Plan{
+    public void getRate(){
+        System.out.println("domestic plan");
+    }
+}
+
+class CommercialPlan extends DomesticPlan {
+    // @override
+
+    public void getRate() {
+        System.out.println("commercial plan");
+    }
+
+    public void test() {};
+}
+
+class RandomPlan extends CommercialPlan {
+    // @override
+    RandomPlan() {};
+    public void getRate() {
+        super.getRate();
+        System.out.println("random plan");
+    }
+
+    public void test() {};
+}
+
+class InstitutionalPlan extends Plan {
+    // @override
+    public void getRate() {
+        rate = 5.50;
+    }
+
 }
