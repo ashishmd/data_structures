@@ -21,7 +21,7 @@ class MatrixRotation{
     printMatrix(input);
   }
 
-  public static void rotateMatrix(int[][] matrix) {
+  private static void rotateMatrix(int[][] matrix) {
     int start = 0;
     int end = matrix.length - 1;
     int previous = matrix[start][start];
