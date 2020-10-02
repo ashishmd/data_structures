@@ -5,6 +5,10 @@ public class CommonUtils {
         System.out.print(string);
     }
 
+    public static void println (Object string) {
+        System.out.println(string);
+    }
+
     public static void printMatrix(int[][] matrix) {
         for(int[] row : matrix) {
             for(int item: row) {
