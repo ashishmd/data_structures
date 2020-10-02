@@ -31,7 +31,11 @@ public class SubArrayWithGivenSum {
       if(i != 0) {
         result.append("\n");
       }
-      result.append(resultPositions[0]).append(" ").append(resultPositions[1]);
+      if (resultPositions[0] == -1) {
+        result.append(resultPositions[0]);
+      } else {
+        result.append(resultPositions[0]).append(" ").append(resultPositions[1]);
+      }
     }
 
     CommonUtils.print(result.toString());
@@ -47,7 +51,7 @@ public class SubArrayWithGivenSum {
       if(sum == currentSum) {
         break;
       }
-      if(start == end && currentSum > sum) {
+      if(start == end && currentSum > sum && start < size - 1) {
         start++;
         end++;
         currentSum = array[start];
