@@ -23,7 +23,7 @@ public class RottenOranges {
       int[][] grid = new int[m][n];
       gridData = new int[m][n];
       for (int i = 0; i < m; i++) {
-        for(int j = 0; j < n; j++) {
+        for(int j = 0; j < n; j++) { 
           gridData[i][j] = Integer.MAX_VALUE;
           grid[i][j] = sc.nextInt();
         }
