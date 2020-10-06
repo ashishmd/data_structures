@@ -1,4 +1,4 @@
-package designPatterns.singleton;
+package designPatterns.creationalPatterns.singleton;
 
 public class Logger {
   private static Logger loggerInstance = new Logger();

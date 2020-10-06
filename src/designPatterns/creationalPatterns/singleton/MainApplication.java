@@ -1,6 +1,5 @@
-package designPatterns.singleton;
+package designPatterns.creationalPatterns.singleton;
 
-import static utils.CommonUtils.print;
 import static utils.CommonUtils.println;
 
 public class MainApplication {
